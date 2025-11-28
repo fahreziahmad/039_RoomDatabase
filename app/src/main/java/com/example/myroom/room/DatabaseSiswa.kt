@@ -10,3 +10,7 @@ abstract class DatabaseSiswa : RoomDatabase() {
 
     abstract fun SiswaDao(): SiswaDao
 
+    companion object {
+        @Volatile
+        private var Instance: DatabaseSiswa? = null
+
